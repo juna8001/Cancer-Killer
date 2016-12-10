@@ -46,6 +46,7 @@ public class Gun : MonoBehaviour, IWeapon
         {
             source.clip = clip;
             Bullets--;
+            dropShell();
             source.Play();
             lastShoot = Time.time;
             GameObject go = Instantiate<GameObject>(bullet);
@@ -79,5 +80,20 @@ public class Gun : MonoBehaviour, IWeapon
     public int maxAmmo()
     {
         return maxBullets;
+    }
+
+    public GameObject shell;
+
+    public Vector3 dropForce;
+
+    public virtual void dropShell()
+    {
+        GameObject go = (GameObject)Instantiate(shell, transform.position, transform.rotation);
+        go.GetComponent<Rigidbody>().AddForce(transform.TransformVector(
+            new Vector3(
+                dropForce.x * Random.Range(-1.0f, 1.0f),
+                dropForce.y * Random.Range(0.5f, 1.0f),
+                dropForce.z * Random.Range(0.0f, 1.0f)
+            )), ForceMode.Impulse);
     }
 }

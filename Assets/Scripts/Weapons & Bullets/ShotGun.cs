@@ -23,6 +23,7 @@ public class ShotGun : Gun {
             source.Play();
             Bullets--;
             lastShoot = Time.time;
+            dropShell();
             for(int i = 0; i < shoots; i++)
             {
                 GameObject go = Instantiate<GameObject>(bullet);

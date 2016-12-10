@@ -28,6 +28,7 @@ public class Rifle : Gun {
         else
             if (Time.time - lastShoot > shootTime)
         {
+            dropShell();
             Bullets--;
             sources[sour].Play();
             sour = (sour + 1) % sources.Length;

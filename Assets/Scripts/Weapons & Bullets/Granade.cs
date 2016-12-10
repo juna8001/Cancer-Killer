@@ -17,7 +17,10 @@ public class Granade : Bullet {
         Collider[] hits = Physics.OverlapSphere(transform.position, range, mask);
         foreach(Collider col in hits)
         {
-            col.GetComponent<Enemy>().DealDmg(Random.Range(minDmg, maxDmg));
+            if (col.tag == "Enemy")
+                col.GetComponent<Enemy>().DealDmg(Random.Range(minDmg, maxDmg));
+            else if (col.tag == "Destroyable")
+                col.GetComponent<DestroyableWall>().Destruction(transform.position, 10);
         }
         Destroy(gameObject);
     }
