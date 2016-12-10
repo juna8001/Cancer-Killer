@@ -191,7 +191,7 @@ GameObject:
   - 33: {fileID: 584948166}
   - 65: {fileID: 584948165}
   - 23: {fileID: 584948164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,9 +338,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 1061604454}
   - 114: {fileID: 1061604455}
-  m_Layer: 0
+  - 114: {fileID: 1061604456}
+  - 135: {fileID: 1061604457}
+  m_Layer: 9
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,6 +372,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bbd014203fcb14fb35f9e14550a5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1061604456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061604453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d2b640722b0044fadb9e3fb93318be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  hp: 100
+--- !u!135 &1061604457
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061604453}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!1 &1298181323
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +473,8 @@ MonoBehaviour:
   jumpHeight: 20
   jumpTime: 0.6
   spawnedEnemyPrefab: {fileID: 1000012987087806, guid: f7914ad483110d244a83d7ef0ac7e6b1,
+    type: 2}
+  boomEnemyPrefab: {fileID: 1000010729166750, guid: 0e49250411de00341984fe227fcdba8e,
     type: 2}
 --- !u!1 &1498034435
 GameObject:
@@ -626,9 +655,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1925461063}
   - 33: {fileID: 1925461066}
-  - 135: {fileID: 1925461065}
   - 23: {fileID: 1925461064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,18 +706,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1925461065
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1925461062}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1925461066
 MeshFilter:
   m_ObjectHideFlags: 0

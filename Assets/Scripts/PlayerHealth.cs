@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 
     [SerializeField]
-    private int hp;
+    public int hp;
 
     public static PlayerHealth instance;
 

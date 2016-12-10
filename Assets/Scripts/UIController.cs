@@ -5,11 +5,13 @@ using System.Collections;
 public class UIController : MonoBehaviour {
 
     public WeaponManager wp;
+    public PlayerHealth hp;
 
-    public Text text;
+    public Text ammoText, hpText;
 
     void Update()
     {
-        text.text = wp.getWeapon().getAmmo() + " / " + wp.getWeapon().maxAmmo();
+        ammoText.text = wp.getWeapon().getAmmo() + " / " + wp.getWeapon().maxAmmo();
+        hpText.text = hp.hp.ToString();
     }
 }
