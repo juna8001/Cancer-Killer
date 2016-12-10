@@ -4,11 +4,11 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
     [SerializeField]
-    private float speed = 7f;
+    protected float speed = 7f;
     [SerializeField]
-    private int hp = 3;
-    private Rigidbody body;
-    private Animator animator;
+    protected int hp = 3;
+    protected Rigidbody body;
+    protected Animator animator;
 
     void Awake()
     {
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
         animator.SetFloat("Multiplayer", Random.Range(0.8f, 1.2f));
     }
 
-    void Update()
+    protected virtual void Update()
     {
         body.AddForce((transform.position - Camera.main.transform.position).normalized * speed * Time.deltaTime);
     }
