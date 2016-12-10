@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Gun
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
+  m_Shader: {fileID: 4800000, guid: b4a3444877fbfe745b948bb92327e961, type: 3}
+  m_ShaderKeywords: _COLOR_ON _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -69,7 +69,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ToonShade
+      second:
+        m_Texture: {fileID: 2800000, guid: d245f9671bf6842d48d1a304086ee00d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    - first:
+        name: _Brightness
+      second: 1
     - first:
         name: _BumpScale
       second: 1
@@ -79,6 +91,9 @@ Material:
     - first:
         name: _DetailNormalMapScale
       second: 1
+    - first:
+        name: _DetailTex
+      second: 0
     - first:
         name: _DstBlend
       second: 0
@@ -101,8 +116,17 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
+        name: _Outline
+      second: 2
+    - first:
         name: _Parallax
       second: 0.02
+    - first:
+        name: _ScaleX
+      second: 1
+    - first:
+        name: _ScaleY
+      second: 1
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -113,7 +137,13 @@ Material:
         name: _SrcBlend
       second: 1
     - first:
+        name: _TintColor
+      second: 1
+    - first:
         name: _UVSec
+      second: 0
+    - first:
+        name: _VertexColor
       second: 0
     - first:
         name: _ZWrite
@@ -125,3 +155,6 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _OutlineColor
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}

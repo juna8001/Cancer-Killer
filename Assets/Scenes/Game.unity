@@ -3381,6 +3381,22 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0.0001
       objectReference: {fileID: 0}
+    - target: {fileID: 4000013978600874, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.03415568
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013978600874, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.21383503
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013978600874, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.0074814097
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013978600874, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.97624385
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
   m_IsPrefabParent: 0
@@ -3557,6 +3573,8 @@ MonoBehaviour:
     m_Bits: 512
   minDmg: 5
   maxDmg: 5
+  bloodSplash: {fileID: 1000012643758966, guid: 3cd00411676e02042acbc10fc9a03a40,
+    type: 2}
   clip: {fileID: 8300000, guid: d27e286b2ad55384fb29b501754c2ff0, type: 3}
 --- !u!23 &1448421605
 MeshRenderer:
@@ -4163,7 +4181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1000012041267864, guid: 8566c517cad00df46aa6b7104f0f5b0b, type: 2}
-  bulletSpeed: 12
+  bulletSpeed: 25
   shootTime: 1
   maxBullets: 0
   Bullets: 10

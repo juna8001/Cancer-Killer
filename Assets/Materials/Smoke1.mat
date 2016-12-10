@@ -77,8 +77,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
+        name: PixelSnap
+      second: 0
+    - first:
         name: _Brightness
-      second: 3
+      second: 1
     - first:
         name: _BumpScale
       second: 1
@@ -118,6 +121,12 @@ Material:
     - first:
         name: _Parallax
       second: 0.02
+    - first:
+        name: _ScaleX
+      second: 1
+    - first:
+        name: _ScaleY
+      second: 1
     - first:
         name: _SmoothnessTextureChannel
       second: 0

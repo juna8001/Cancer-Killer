@@ -11,6 +11,9 @@ public class Knive : MonoBehaviour, IWeapon
     public LayerMask mask;
     public int minDmg, maxDmg;
 
+    [SerializeField]
+    private GameObject bloodSplash;
+
     private MeshRenderer rend;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -46,6 +49,8 @@ public class Knive : MonoBehaviour, IWeapon
             foreach(RaycastHit hit in hits)
             {
                 hit.collider.GetComponent<Enemy>().DealDmg(UnityEngine.Random.Range(minDmg, maxDmg));
+                GameObject temp = (GameObject)Instantiate(bloodSplash, hit.point, new Quaternion());
+                temp.GetComponent<ParticleSystem>().Play();
             }
         }
     }
