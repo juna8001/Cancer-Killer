@@ -10,7 +10,7 @@ public class BossManager : MonoBehaviour {
 
     public float jumpHeight, jumpTime;
 
-    public GameObject spawnedEnemyPrefab;
+    public GameObject spawnedEnemyPrefab, boomEnemyPrefab;
 
     void Start()
     {
@@ -49,7 +49,7 @@ public class BossManager : MonoBehaviour {
         current = index;
     }
 
-    public void Spawn()
+    public void Spawn1()
     {
         int ammount = Random.Range(3, 9);
         for(int i = 0; i < ammount; i++)
@@ -58,12 +58,23 @@ public class BossManager : MonoBehaviour {
         }
     }
 
+    public void Spawn2()
+    {
+        int ammount = Random.Range(3, 9);
+        for (int i = 0; i < ammount; i++)
+        {
+            Instantiate(boomEnemyPrefab, BOSS.position + BOSS.TransformVector(Random.Range(-5f, 5f), Random.Range(-5f, 5f), Random.Range(-5f, -10f)), BOSS.rotation);
+        }
+    }
+
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
             Jump();
         if (Input.GetKeyDown(KeyCode.Alpha1))
-            Spawn();
+            Spawn1();
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            Spawn2();
     }
 
 }

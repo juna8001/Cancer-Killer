@@ -447,6 +447,8 @@ MonoBehaviour:
   jumpTime: 0.6
   spawnedEnemyPrefab: {fileID: 1000012987087806, guid: f7914ad483110d244a83d7ef0ac7e6b1,
     type: 2}
+  boomEnemyPrefab: {fileID: 1000010729166750, guid: 0e49250411de00341984fe227fcdba8e,
+    type: 2}
 --- !u!1 &1498034435
 GameObject:
   m_ObjectHideFlags: 0

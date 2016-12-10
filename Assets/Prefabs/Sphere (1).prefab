@@ -195,6 +195,8 @@ MonoBehaviour:
   minDmg: 1
   maxDmg: 2
   existTime: 10
+  bloodSplash: {fileID: 1000012643758966, guid: 3cd00411676e02042acbc10fc9a03a40,
+    type: 2}
 --- !u!135 &135000011507950338
 SphereCollider:
   m_ObjectHideFlags: 1

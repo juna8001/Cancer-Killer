@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     protected float speed = 7f;
     [SerializeField]
-    protected int hp = 3;
+    public int hp = 3;
     protected Rigidbody body;
     protected Animator animator;
 
@@ -26,7 +26,6 @@ public class Enemy : MonoBehaviour {
 
 	public void DealDmg(int dmg)
     {
-        Debug.Log(name + " get dmg: " + dmg);
         hp -= dmg;
         if(hp<=0)
         {
@@ -34,7 +33,7 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    void Die()
+    protected virtual void Die()
     {
         animator.SetTrigger("Death");
         SpriteRotator rotator = GetComponentInChildren<SpriteRotator>();
