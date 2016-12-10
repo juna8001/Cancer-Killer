@@ -7,16 +7,21 @@ public class Enemy : MonoBehaviour {
     protected float speed = 7f;
     [SerializeField]
     public int hp = 3;
+    [SerializeField]
+    private AudioClip [] shouts;
     protected Rigidbody body;
     protected Animator animator;
+
+    private AudioSource audioSource;
 
     void Awake()
     {
         body = GetComponent<Rigidbody>();
         hp = Random.Range(30, 60);
-        speed = Random.Range(1000, 3000);
+        speed = Random.Range(700, 1000);
         animator = GetComponent<Animator>();
         animator.SetFloat("Multiplayer", Random.Range(0.8f, 1.2f));
+        audioSource = GetComponent<AudioSource>();
     }
 
     protected virtual void Update()
@@ -35,6 +40,9 @@ public class Enemy : MonoBehaviour {
 
     protected virtual void Die()
     {
+        audioSource.clip = shouts[Random.Range(0, shouts.Length)];
+        audioSource.Play();
+        GetComponentInChildren<EnemyBodyRandomiser>().SetXEyes();
         animator.SetTrigger("Death");
         SpriteRotator rotator = GetComponentInChildren<SpriteRotator>();
         rotator.enabled = false;
