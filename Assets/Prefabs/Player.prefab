@@ -204,7 +204,7 @@ GameObject:
   - 114: {fileID: 114000012927981274}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -670,6 +670,7 @@ MonoBehaviour:
     m_Bits: 512
   minDmg: 20
   maxDmg: 30
+  clip: {fileID: 0}
 --- !u!114 &114000011363757234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -688,6 +689,11 @@ MonoBehaviour:
   Bullets: 24
   minDmg: 0
   maxDmg: 0
+  shootAngle: 0.1
+  clip: {fileID: 0}
+  emptyClip: {fileID: 0}
+  shell: {fileID: 0}
+  dropForce: {x: 0, y: 0, z: 0}
 --- !u!114 &114000011986951482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -706,8 +712,12 @@ MonoBehaviour:
   Bullets: 50
   minDmg: 5
   maxDmg: 7
-  shoots: 4
   shootAngle: 3
+  clip: {fileID: 0}
+  emptyClip: {fileID: 0}
+  shell: {fileID: 0}
+  dropForce: {x: 0, y: 0, z: 0}
+  shoots: 4
 --- !u!114 &114000012390808926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,6 +749,11 @@ MonoBehaviour:
   Bullets: 4
   minDmg: 5
   maxDmg: 20
+  shootAngle: 0.1
+  clip: {fileID: 0}
+  emptyClip: {fileID: 0}
+  shell: {fileID: 0}
+  dropForce: {x: 0, y: 0, z: 0}
 --- !u!114 &114000012927981274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -752,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 114000013630461606}
   wm: {fileID: 114000013386881396}
+  kicker: {fileID: 0}
   mouseSens: {x: 6, y: -2}
 --- !u!114 &114000013386881396
 MonoBehaviour:
@@ -800,6 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
+  RunSpeed: 0
   Rotation: {x: 0, y: 0}
   Head: {fileID: 0}
 --- !u!114 &114000013899222084
@@ -820,6 +837,11 @@ MonoBehaviour:
   Bullets: 18
   minDmg: 0
   maxDmg: 0
+  shootAngle: 0.1
+  clip: {fileID: 0}
+  emptyClip: {fileID: 0}
+  shell: {fileID: 0}
+  dropForce: {x: 0, y: 0, z: 0}
 --- !u!114 &114000014279728054
 MonoBehaviour:
   m_ObjectHideFlags: 1
