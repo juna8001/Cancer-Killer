@@ -9,10 +9,18 @@ public class ShotGun : Gun {
     {
         if (Bullets == 0)
         {
+            if (Time.time - lastShoot > shootTime)
+            {
+                source.clip = emptyClip;
+                source.Play();
+                lastShoot = Time.time;
+            }
         }
         else
             if (Time.time - lastShoot > shootTime)
         {
+            source.clip = clip;
+            source.Play();
             Bullets--;
             lastShoot = Time.time;
             for(int i = 0; i < shoots; i++)

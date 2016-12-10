@@ -176,13 +176,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6edb2cc0ff65034db25d7e8a6bb017c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1000012041267864, guid: 6a08cb602f3e9b14aa503f1b41d3899a, type: 2}
+  bullet: {fileID: 0}
   bulletSpeed: 5
   shootTime: 0.4
   maxBullets: 0
   Bullets: 18
   minDmg: 0
   maxDmg: 0
+  shootAngle: 0.1
 --- !u!23 &36376150
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -410,6 +411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc0d2cdd6232d742bdfb6facbdd0f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 7
+  hp: 3
 --- !u!1 &225543064
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
+  RunSpeed: 0
   Rotation: {x: 0, y: 0}
   Head: {fileID: 0}
 --- !u!54 &225543071
@@ -646,9 +650,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1720418522}
   m_RootOrder: 0
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -644, y: 36}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 156, y: 36}
   m_SizeDelta: {x: 250, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280327143
@@ -1412,6 +1416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc0d2cdd6232d742bdfb6facbdd0f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 7
+  hp: 3
 --- !u!114 &1001984248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,13 +1619,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6edb2cc0ff65034db25d7e8a6bb017c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1000010156436766, guid: 0ddd45b793d9eb149bfa2738e05f1fd0, type: 2}
+  bullet: {fileID: 0}
   bulletSpeed: 10
   shootTime: 0.1
   maxBullets: 0
   Bullets: 24
   minDmg: 0
   maxDmg: 0
+  shootAngle: 0.1
 --- !u!1 &1058754218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,15 +2034,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b664f407710d84a45a18c38b562dfa24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1000010156436766, guid: 0ddd45b793d9eb149bfa2738e05f1fd0, type: 2}
+  bullet: {fileID: 0}
   bulletSpeed: 8
   shootTime: 1
   maxBullets: 0
   Bullets: 50
   minDmg: 5
   maxDmg: 7
-  shoots: 4
   shootAngle: 3
+  shoots: 4
 --- !u!23 &1593355907
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2127,13 +2134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6edb2cc0ff65034db25d7e8a6bb017c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1000012041267864, guid: 8566c517cad00df46aa6b7104f0f5b0b, type: 2}
+  bullet: {fileID: 0}
   bulletSpeed: 15
   shootTime: 3
   maxBullets: 0
   Bullets: 4
   minDmg: 5
   maxDmg: 20
+  shootAngle: 0.1
 --- !u!23 &1709155804
 MeshRenderer:
   m_ObjectHideFlags: 0

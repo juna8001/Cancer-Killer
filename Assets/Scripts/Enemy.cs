@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour {
         body = GetComponent<Rigidbody>();
         hp = Random.Range(1,4);
         animator = GetComponent<Animator>();
-        animator.SetFloat("Multiplayer", Random.Range(0.8f, 1.2f));
+        //animator.SetFloat("Multiplayer", Random.Range(0.8f, 1.2f));
     }
 
     void Update()

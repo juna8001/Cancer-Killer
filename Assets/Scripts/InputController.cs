@@ -5,12 +5,13 @@ public class InputController : MonoBehaviour {
 
     public Movement movement;
     public WeaponManager wm;
+    public Kicker kicker;
 
     public Vector2 mouseSens;
 
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -22,6 +23,9 @@ public class InputController : MonoBehaviour {
             wm.NextWeapon(x > 0);
         if (Input.GetKey(KeyCode.Mouse0))
             wm.Shoot();
+        if (Input.GetKey(KeyCode.E))
+            kicker.Kick();
+
     }
 
 }

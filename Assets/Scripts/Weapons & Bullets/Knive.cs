@@ -15,6 +15,9 @@ public class Knive : MonoBehaviour, IWeapon
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    public AudioClip clip;
+    protected AudioSource source;
+
     public void SetChoosen(bool choosen)
     {
         //rend.enabled = choosen;
@@ -26,6 +29,8 @@ public class Knive : MonoBehaviour, IWeapon
         rend = GetComponent<MeshRenderer>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInParent<Animator>();
+        source = GetComponent<AudioSource>();
+        source.clip = clip;
     }
 
     public void Shoot()
@@ -33,6 +38,8 @@ public class Knive : MonoBehaviour, IWeapon
         if(Time.time - lastShoot > shootTime)
         {
             lastShoot = Time.time;
+
+            source.Play();
 
             RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward, range, mask);
             Animate("Knife");
