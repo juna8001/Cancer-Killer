@@ -17,6 +17,16 @@ public class Granade : Bullet {
     IEnumerator counter()
     {
         yield return new WaitForSeconds(time);
+        Explode();
+    }
+
+    protected override void OnCollisionEnter(Collision collision)
+    {
+        Explode();
+    }
+
+    void Explode()
+    {
         Collider[] hits = Physics.OverlapSphere(transform.position, range, mask);
         foreach(Collider col in hits)
         {
@@ -28,10 +38,5 @@ public class Granade : Bullet {
         GameObject temp = (GameObject)Instantiate(explosion, transform.position, new Quaternion());
         temp.GetComponent<ParticleSystem>().Play();
         Destroy(gameObject);
-    }
-
-    protected override void OnCollisionEnter(Collision collision)
-    {
-        
     }
 }
