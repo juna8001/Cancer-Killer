@@ -34,23 +34,25 @@ public class Movement : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
 
+    Vector3 move;
+
     void FixedUpdate()
     {
         if(direction.magnitude == 0)
         {
             animator.SetInteger("State", 0);
             //dont ask
-            body.velocity = transform.TransformVector(direction) * Speed;
+            move = transform.TransformVector(direction) * Speed;
         }
         else if(!Input.GetKey(KeyCode.LeftShift))
         {
             animator.SetInteger("State", 1);
-            body.velocity = transform.TransformVector(direction) * Speed;
+            move = transform.TransformVector(direction) * Speed;
         }
         else
         {
             animator.SetInteger("State", 2);
-            body.velocity = transform.TransformVector(direction) * RunSpeed;
+            move = transform.TransformVector(direction) * RunSpeed;
         }
         transform.Rotate(transform.up, Rotation.x);
         float angle = Head.localRotation.eulerAngles.x + Rotation.y;
@@ -59,6 +61,12 @@ public class Movement : MonoBehaviour {
         if (angle < -180)
             angle += 360;
         Head.localEulerAngles = new Vector3(Mathf.Clamp(angle, -90, 90), 0, 0);
+        body.velocity = new Vector3(0, body.velocity.y, 0);
+    }
+
+    void Update()
+    {
+        body.MovePosition(transform.position + move * Time.deltaTime);
     }
 
 }
