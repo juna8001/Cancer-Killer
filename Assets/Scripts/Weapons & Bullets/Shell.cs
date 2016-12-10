@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class Shell : MonoBehaviour {
 
     public AudioClip clip;

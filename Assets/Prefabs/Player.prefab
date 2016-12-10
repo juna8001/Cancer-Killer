@@ -361,6 +361,7 @@ GameObject:
   - 95: {fileID: 95000012231058328}
   - 114: {fileID: 114000011867427262}
   - 114: {fileID: 114000011457558148}
+  - 82: {fileID: 82000012100925892}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -531,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 1000012477794178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010887686522}
@@ -1356,6 +1357,80 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82000012100925892
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014294476848}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 427c22a65f6faa5459ba50526e8ac3f9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!82 &82000012170956042
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1733,12 +1808,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootTime: 0.5
-  range: 1
+  range: 2
   mask:
     serializedVersion: 2
     m_Bits: 512
-  minDmg: 20
-  maxDmg: 40
+  minDmg: 100
+  maxDmg: 100
   bloodSplash: {fileID: 1000012643758966, guid: 3cd00411676e02042acbc10fc9a03a40,
     type: 2}
   clip: {fileID: 8300000, guid: d27e286b2ad55384fb29b501754c2ff0, type: 3}
@@ -1767,13 +1842,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KickWaitTime: 1.2
   KickTime: 0.3
-  range: 1
+  range: 2
   kickForce: 500
   mask:
     serializedVersion: 2
     m_Bits: 512
-  minDmg: 0
-  maxDmg: 0
+  minDmg: 100
+  maxDmg: 100
+  bloodSplash: {fileID: 1000012643758966, guid: 3cd00411676e02042acbc10fc9a03a40,
+    type: 2}
 --- !u!114 &114000011986951482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1790,7 +1867,7 @@ MonoBehaviour:
   shootTime: 1
   maxBullets: 0
   Bullets: 25
-  minDmg: 10
+  minDmg: 20
   maxDmg: 30
   shootAngle: 6
   clip: {fileID: 8300000, guid: 9661810d55fb3ef4ab2ba04cea37ef28, type: 3}
@@ -1829,8 +1906,8 @@ MonoBehaviour:
   shootTime: 1
   maxBullets: 0
   Bullets: 10
-  minDmg: 30
-  maxDmg: 50
+  minDmg: 60
+  maxDmg: 80
   shootAngle: 0.1
   clip: {fileID: 8300000, guid: fccbd51398fb84146a6621b5fcfc4e00, type: 3}
   emptyClip: {fileID: 8300000, guid: b2e46313ff23dca44bdc64cc1d8a27dc, type: 3}
@@ -1867,7 +1944,7 @@ MonoBehaviour:
   shootTime: 0.1
   maxBullets: 0
   Bullets: 100
-  minDmg: 15
+  minDmg: 35
   maxDmg: 45
   shootAngle: 2
   clip: {fileID: 8300000, guid: 3092b352e3c737848a7fda1e66da76ad, type: 3}
@@ -1973,7 +2050,7 @@ MonoBehaviour:
   shootTime: 0.4
   maxBullets: 0
   Bullets: 25
-  minDmg: 10
+  minDmg: 30
   maxDmg: 40
   shootAngle: 2
   clip: {fileID: 8300000, guid: c05b721e131de87458ca4831ba95e369, type: 3}
@@ -2102,7 +2179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: daded892def046843b409460b10b8e9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9a617f092e0ae540b8749afcd0659b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
