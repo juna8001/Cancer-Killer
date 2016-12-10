@@ -13,7 +13,7 @@ Shader "TSF/Base1"
    
     Subshader 
     {
-    	Tags { "RenderType"="Opaque" }
+    	Tags { "RenderType"="Opaque" "LightMode" = "ForwardBase"}
 		LOD 250
     	ZWrite On
 	   	Cull Back
@@ -31,6 +31,9 @@ Shader "TSF/Base1"
                 #pragma glsl_no_auto_normalization
                 #pragma multi_compile _TEX_OFF _TEX_ON
                 #pragma multi_compile _COLOR_OFF _COLOR_ON
+				#pragma multi_compile_fog
+				#pragma multi_compile_fwdbase
+				#include "UnityLightingCommon.cginc"
 
                 
                 #if _TEX_ON
@@ -52,6 +55,8 @@ Shader "TSF/Base1"
                     half2 uv : TEXCOORD0;
                     #endif
                     half2 uvn : TEXCOORD1;
+					UNITY_FOG_COORDS(1)
+					fixed4 diff : COLOR1;
                  };
                
                 v2f vert (appdata_base0 v)
@@ -65,6 +70,13 @@ Shader "TSF/Base1"
                      #if _TEX_ON
                     o.uv = TRANSFORM_TEX ( v.texcoord, _MainTex );
                     #endif
+					
+					half3 worldNormal = UnityObjectToWorldNormal(v.normal);
+					half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+					o.diff = nl * _LightColor0;
+				
+					UNITY_TRANSFER_FOG(o, o.pos);
+					
                     return o;
                 }
 
@@ -85,8 +97,12 @@ Shader "TSF/Base1"
 					
 					#if _TEX_ON
 					fixed4 detail = tex2D ( _MainTex, i.uv );
+					UNITY_APPLY_FOG(i.fogCoord, toonShade);
+					toonShade *= i.diff;
 					return  toonShade * detail*_Brightness;
 					#else
+					UNITY_APPLY_FOG(i.fogCoord, toonShade);
+					toonShade *= i.diff;
 					return  toonShade * _Brightness;
 					#endif
                 }

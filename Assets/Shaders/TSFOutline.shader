@@ -17,7 +17,7 @@ Shader "TSF/BaseOutline1"
  
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Opaque" "LightMode" = "ForwardBase"}
 		LOD 250 
         Lighting Off
         Fog { Mode Off }
@@ -34,6 +34,10 @@ Shader "TSF/BaseOutline1"
 			#pragma glsl_no_auto_normalization
             #pragma vertex vert
  			#pragma fragment frag
+			#pragma multi_compile_fog
+			#pragma multi_compile_fwdbase
+			//#include "AutoLight.cginc"
+			#include "UnityLightingCommon.cginc"
 			
             struct appdata_t 
             {
@@ -44,6 +48,9 @@ Shader "TSF/BaseOutline1"
 			struct v2f 
 			{
 				float4 pos : SV_POSITION;
+				UNITY_FOG_COORDS(1)
+				fixed4 diff : COLOR1;
+				
 			};
 
             fixed _Outline;
@@ -55,14 +62,27 @@ Shader "TSF/BaseOutline1"
 			    o.pos = v.vertex;
 			    o.pos.xyz += normalize(v.normal.xyz) *_Outline*0.01;
 			    o.pos = mul(UNITY_MATRIX_MVP, o.pos);
+				
+				half3 worldNormal = UnityObjectToWorldNormal(v.normal);
+				half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+				o.diff = nl * _LightColor0;
+				
+				UNITY_TRANSFER_FOG(o, o.pos);
+				
 			    return o;
             }
             
             fixed4 _OutlineColor;
             
             fixed4 frag(v2f i) :COLOR 
-			{
-		    	return _OutlineColor;
+			{ 
+				fixed4 c = _OutlineColor;
+				UNITY_APPLY_FOG(i.fogCoord, c);
+				
+				
+				c *= i.diff;
+			
+		    	return c;
 			}
             
             ENDCG
