@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites-Bilboard
+  m_Name: Sprites-LightAndFog
   m_Shader: {fileID: 4800000, guid: b4a3444877fbfe745b948bb92327e961, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1

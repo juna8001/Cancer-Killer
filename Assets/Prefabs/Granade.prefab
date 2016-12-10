@@ -61,7 +61,8 @@ MeshRenderer:
   - {fileID: 2100000, guid: 1ebe7130d264dc941bd801d9f734a240, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 4000013672046956, guid: 7d1cb066bc5e10640b3d592b423c04e3,
+    type: 2}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
@@ -165,6 +166,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 4608
+  explosion: {fileID: 1000012555443650, guid: 7d1cb066bc5e10640b3d592b423c04e3, type: 2}
 --- !u!135 &135000011507950338
 SphereCollider:
   m_ObjectHideFlags: 1
