@@ -10,7 +10,7 @@ public class InputController : MonoBehaviour {
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -22,6 +22,8 @@ public class InputController : MonoBehaviour {
             wm.NextWeapon(x > 0);
         if (Input.GetKey(KeyCode.Mouse0))
             wm.Shoot();
+        if (Input.GetKey(KeyCode.R))
+            wm.Reload();
     }
 
 }

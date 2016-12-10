@@ -45,18 +45,28 @@ public class WeaponManager : MonoBehaviour {
 
     IEnumerator Change(int next)
     {
-        yield return new WaitForSeconds(ChangeWeaponTime / 2);
-        weapons[currentWeapon].SetChoosen(false);
-        currentWeapon = next;
-        weapons[currentWeapon].SetChoosen(true);
-        yield return new WaitForSeconds(ChangeWeaponTime / 2);
-        changeWeaponCoroutine = null;
+        if(changeWeaponCoroutine == null) {
+            yield return new WaitForSeconds(ChangeWeaponTime / 2);
+            weapons[currentWeapon].SetChoosen(false);
+            currentWeapon = next;
+            weapons[currentWeapon].SetChoosen(true);
+            yield return new WaitForSeconds(ChangeWeaponTime / 2);
+            changeWeaponCoroutine = null;
+        }
     }
 
     public void Shoot()
     {
         if (changeWeaponCoroutine == null)
             weapons[currentWeapon].Shoot();
+    }
+
+    public void Reload()
+    {
+        if (changeWeaponCoroutine == null)
+        {
+            weapons[currentWeapon].Reload();
+        }
     }
 
 }
