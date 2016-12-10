@@ -71,7 +71,7 @@ Shader "Sprites/Bilboard"
 				OUT.vertex = mul(UNITY_MATRIX_MVP, IN.vertex);
 				
 				OUT.texcoord = IN.texcoord;
-				OUT.color = _Color;
+				OUT.color = _Color * IN.color;
 				#ifdef PIXELSNAP_ON
 				OUT.vertex = UnityPixelSnap (OUT.vertex);
 				#endif
