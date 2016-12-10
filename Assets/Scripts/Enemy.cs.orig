@@ -6,12 +6,18 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     protected float speed = 7f;
     [SerializeField]
-    protected int hp = 3;
+<<<<<<< HEAD
+    private int hp = 3;
     [SerializeField]
     private AudioClip [] shouts;
     private Rigidbody body;
     private Animator animator;
     private AudioSource audioSource;
+=======
+    protected int hp = 3;
+    protected Rigidbody body;
+    protected Animator animator;
+>>>>>>> be436656d507bcf8ae9cca7c31ea0f9c773176a8
 
     void Awake()
     {

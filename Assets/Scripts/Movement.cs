@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Movement : MonoBehaviour {
 
+    public static Transform PlayerTransform;
+
     public float Speed;
 
     public float RunSpeed;
@@ -26,6 +28,7 @@ public class Movement : MonoBehaviour {
 
     void Start()
     {
+        PlayerTransform = transform;
         body = GetComponent<Rigidbody>();
         Head = transform.GetChild(0).transform;
         animator = GetComponent<Animator>();

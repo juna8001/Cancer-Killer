@@ -10,6 +10,8 @@ public class BossManager : MonoBehaviour {
 
     public float jumpHeight, jumpTime;
 
+    public GameObject spawnedEnemyPrefab;
+
     void Start()
     {
         Transform pos = transform.GetChild(0);
@@ -20,7 +22,12 @@ public class BossManager : MonoBehaviour {
         current = 0;
     }
 
-    public IEnumerator Jump()
+    public void Jump()
+    {
+        StartCoroutine(jump());
+    }
+
+    IEnumerator jump()
     {
         Debug.Log("123");
         int index = current;
@@ -33,7 +40,7 @@ public class BossManager : MonoBehaviour {
         {
             Vector3 position = new Vector3(
                 Mathf.Lerp(positions[current].x, positions[index].x, i / l),
-                jumpHeight * (1-Mathf.Abs(i - l/2) / (l/2)* Mathf.Abs(i - l / 2) / (l / 2)),
+                Mathf.Lerp(positions[current].y, positions[index].y, i / l) + jumpHeight * (1-Mathf.Abs(i - l/2) / (l/2)* Mathf.Abs(i - l / 2) / (l / 2)),
                 Mathf.Lerp(positions[current].z, positions[index].z, i / l)
                 );
             BOSS.position = position;
@@ -42,10 +49,21 @@ public class BossManager : MonoBehaviour {
         current = index;
     }
 
+    public void Spawn()
+    {
+        int ammount = Random.Range(3, 9);
+        for(int i = 0; i < ammount; i++)
+        {
+            Instantiate(spawnedEnemyPrefab, BOSS.position + BOSS.TransformVector(Random.Range(-5f, 5f), Random.Range(-5f, 5f), Random.Range(-5f, -10f)), BOSS.rotation);
+        }
+    }
+
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            StartCoroutine(Jump());
+            Jump();
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            Spawn();
     }
 
 }
