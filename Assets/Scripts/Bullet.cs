@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public int minDmg, maxDmg;
     public float existTime = 10;
 
-    void Start()
+    protected virtual void Start()
     {
         StartCoroutine(destroyer());
     }
@@ -18,10 +18,10 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
-            Debug.Log("Deal " + Random.Range(minDmg, maxDmg) + " dmg to " + collision.gameObject.name);
+            collision.gameObject.GetComponent<Enemy>().DealDmg(Random.Range(minDmg, maxDmg));
         Destroy(gameObject);
     }
 }

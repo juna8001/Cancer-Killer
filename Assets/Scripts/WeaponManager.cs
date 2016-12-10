@@ -61,12 +61,4 @@ public class WeaponManager : MonoBehaviour {
             weapons[currentWeapon].Shoot();
     }
 
-    public void Reload()
-    {
-        if (changeWeaponCoroutine == null)
-        {
-            weapons[currentWeapon].Reload();
-        }
-    }
-
 }
