@@ -463,8 +463,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 0
-    radius: 0.01
+    type: 1
+    radius: 0.1
     angle: 25
     length: 5
     boxX: 1
@@ -519,11 +519,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    cnt0: 5
+    cnt0: 15
     cnt1: 30
     cnt2: 30
     cnt3: 30
-    cntmax0: 15
+    cntmax0: 30
     cntmax1: 30
     cntmax2: 30
     cntmax3: 30

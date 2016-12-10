@@ -10,11 +10,17 @@ public class Kicker : MonoBehaviour {
     public LayerMask mask;
     public int minDmg, maxDmg;
 
+    [SerializeField]
+    private GameObject bloodSplash;
+
+    private AudioSource audioSource;
+
     Animator anim;
 
-    void Start()
+    void Awake()
     {
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
 	public void Kick()
@@ -37,8 +43,11 @@ public class Kicker : MonoBehaviour {
         Debug.Log(hits.Length);
         foreach (RaycastHit hit in hits)
         {
+            audioSource.Play();
             hit.collider.GetComponent<Enemy>().DealDmg(UnityEngine.Random.Range(minDmg, maxDmg));
             hit.collider.GetComponent<Rigidbody>().AddForce(transform.forward * kickForce, ForceMode.Acceleration);
+            GameObject temp = (GameObject)Instantiate(bloodSplash, hit.point, new Quaternion());
+            temp.GetComponent<ParticleSystem>().Play();
         }
     }
 }
