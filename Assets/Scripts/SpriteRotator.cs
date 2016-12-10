@@ -6,6 +6,6 @@ public class SpriteRotator : MonoBehaviour {
 
 	void Update()
     {
-        transform.rotation = Camera.main.transform.rotation;
+        transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
     }
 }

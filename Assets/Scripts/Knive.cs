@@ -7,6 +7,9 @@ public class Knive : MonoBehaviour, IWeapon
     private MeshRenderer rend;
     public float shootTime;
     float lastShoot;
+    public float range;
+    public LayerMask mask;
+    public int minDmg, maxDmg;
 
     public void SetChoosen(bool choosen)
     {
@@ -23,6 +26,12 @@ public class Knive : MonoBehaviour, IWeapon
         if(Time.time - lastShoot > shootTime)
         {
             lastShoot = Time.time;
+
+            RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward, range, mask);
+            foreach(RaycastHit hit in hits)
+            {
+                hit.collider.GetComponent<Enemy>().DealDmg(UnityEngine.Random.Range(minDmg, maxDmg));
+            }
         }
     }
 }
