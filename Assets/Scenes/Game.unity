@@ -3567,7 +3567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootTime: 0.5
-  range: 1
+  range: 2
   mask:
     serializedVersion: 2
     m_Bits: 512

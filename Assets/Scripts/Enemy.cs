@@ -7,8 +7,11 @@ public class Enemy : MonoBehaviour {
     private float speed = 7f;
     [SerializeField]
     private int hp = 3;
+    [SerializeField]
+    private AudioClip [] shouts;
     private Rigidbody body;
     private Animator animator;
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -16,6 +19,7 @@ public class Enemy : MonoBehaviour {
         hp = Random.Range(1,4);
         animator = GetComponent<Animator>();
         animator.SetFloat("Multiplayer", Random.Range(0.8f, 1.2f));
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -35,6 +39,8 @@ public class Enemy : MonoBehaviour {
 
     void Die()
     {
+        audioSource.clip = shouts[Random.Range(0, shouts.Length)];
+        audioSource.Play();
         animator.SetTrigger("Death");
         SpriteRotator rotator = GetComponentInChildren<SpriteRotator>();
         rotator.enabled = false;
