@@ -61,4 +61,9 @@ public class WeaponManager : MonoBehaviour {
             weapons[currentWeapon].Shoot();
     }
 
+    public IWeapon getWeapon()
+    {
+        return weapons[currentWeapon];
+    }
+
 }

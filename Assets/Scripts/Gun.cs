@@ -42,4 +42,14 @@ public class Gun : MonoBehaviour, IWeapon
     {
         rend.enabled = choosen;
     }
+
+    public int getAmmo()
+    {
+        return Bullets;
+    }
+
+    public int maxAmmo()
+    {
+        return maxBullets;
+    }
 }

@@ -34,4 +34,14 @@ public class Knive : MonoBehaviour, IWeapon
             }
         }
     }
+
+    public int getAmmo()
+    {
+        return 0;
+    }
+
+    public int maxAmmo()
+    {
+        return 0;
+    }
 }
