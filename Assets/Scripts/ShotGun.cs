@@ -4,7 +4,6 @@ using System.Collections;
 public class ShotGun : Gun {
 
     public int shoots;
-    public float shootAngle;
 
     public override void Shoot()
     {
@@ -26,6 +25,7 @@ public class ShotGun : Gun {
                 Bullet bull = go.GetComponent<Bullet>();
                 bull.minDmg = minDmg;
                 bull.maxDmg = maxDmg;
+                Animate("ShotGun");
             }
         }
     }

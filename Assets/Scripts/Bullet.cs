@@ -21,7 +21,9 @@ public class Bullet : MonoBehaviour
     protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
+        {
             collision.gameObject.GetComponent<Enemy>().DealDmg(Random.Range(minDmg, maxDmg));
+        }
         Destroy(gameObject);
     }
 }

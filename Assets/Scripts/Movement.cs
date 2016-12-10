@@ -5,6 +5,8 @@ public class Movement : MonoBehaviour {
 
     public float Speed;
 
+    public float RunSpeed;
+
     private Vector3 direction;
     public Vector3 Direction
     {
@@ -20,15 +22,33 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody body;
 
+    private Animator animator;
+
     void Start()
     {
         body = GetComponent<Rigidbody>();
         Head = transform.GetChild(0).transform;
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
-        body.velocity = transform.TransformVector(direction) * Speed;
+        if(direction.magnitude == 0)
+        {
+            animator.SetInteger("State", 0);
+            //dont ask
+            body.velocity = transform.TransformVector(direction) * Speed;
+        }
+        else if(!Input.GetKey(KeyCode.LeftShift))
+        {
+            animator.SetInteger("State", 1);
+            body.velocity = transform.TransformVector(direction) * Speed;
+        }
+        else
+        {
+            animator.SetInteger("State", 2);
+            body.velocity = transform.TransformVector(direction) * RunSpeed;
+        }
         transform.Rotate(transform.up, Rotation.x);
         float angle = Head.localRotation.eulerAngles.x + Rotation.y;
         if (angle > 180)
@@ -37,4 +57,5 @@ public class Movement : MonoBehaviour {
             angle += 360;
         Head.localEulerAngles = new Vector3(Mathf.Clamp(angle, -90, 90), 0, 0);
     }
+
 }
