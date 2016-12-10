@@ -109,7 +109,7 @@ Shader "Sprites/Bilboard"
 				UNITY_APPLY_FOG(IN.fogCoord, c);
 				
 				//return LIGHT_ATTENUATION(IN) * c;
-				c *= IN.diff;
+				c.rgb *= IN.diff;
 				
 				return c;
 			}
