@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
     protected int hp = 3;
     [SerializeField]
     private AudioClip [] shouts;
-    private Rigidbody body;
+    public Rigidbody body;
     private Animator animator;
     private AudioSource audioSource;
 
