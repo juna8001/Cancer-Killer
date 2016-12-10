@@ -14,7 +14,7 @@ SceneSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.07
@@ -2309,6 +2309,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -0.08327071
       objectReference: {fileID: 0}
+    - target: {fileID: 4000012604589654, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012604589654, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
   m_IsPrefabParent: 0
@@ -3361,21 +3369,17 @@ Prefab:
       propertyPath: m_Name
       value: SampleEnemy (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013978600874, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.03415568
+    - target: {fileID: 4000012604589654, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013978600874, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.21383503
+    - target: {fileID: 4000012604589654, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.4629593
       objectReference: {fileID: 0}
-    - target: {fileID: 4000013978600874, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.0074814097
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013978600874, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.97624385
+    - target: {fileID: 4000010231064892, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.0001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5f388ce5e316744683b44b8bc7afb60, type: 2}

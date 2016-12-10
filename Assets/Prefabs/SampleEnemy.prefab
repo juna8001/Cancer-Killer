@@ -88,6 +88,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012604589654}
   - 212: {fileID: 212000012001908502}
+  - 114: {fileID: 114000012111323736}
   m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
@@ -134,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013487479336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.001}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0001}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
   m_Children: []
@@ -147,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014109548360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
   m_Children: []
@@ -160,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010921410780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
   m_Children: []
@@ -202,6 +203,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.4629593}
   m_LocalEulerAnglesHint: {x: 90.92947, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011451629574}
@@ -256,6 +258,53 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000012111323736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013091755454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d0a586442a30443a2e25b3c60287f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodies:
+  - {fileID: 21300000, guid: a9a617f092e0ae540b8749afcd0659b1, type: 3}
+  - {fileID: 21300000, guid: dc0589551f4956940a88e3867e4dbbb8, type: 3}
+  - {fileID: 21300000, guid: 545808c59f7da3b43841fce7a4b7e486, type: 3}
+  - {fileID: 21300000, guid: f1ff85bb4d6fa814caee0aa16520a732, type: 3}
+  - {fileID: 21300000, guid: dfe90f8db8bd0f548a892df51fb2918c, type: 3}
+  - {fileID: 21300000, guid: cc957dfe451e5884792a3d34dbd3b499, type: 3}
+  - {fileID: 21300000, guid: 38bee2c283b9912488bd883b45f4538b, type: 3}
+  - {fileID: 21300000, guid: a5a0a9b67bfc38948b5428819deec433, type: 3}
+  - {fileID: 21300000, guid: db5e5ced2b2015a4a881606821477df7, type: 3}
+  mouths:
+  - {fileID: 21300000, guid: c5b3f701f429b6b48b199b2c189433d9, type: 3}
+  - {fileID: 21300000, guid: 5baf9b83378f0da4697d6aac32fa6c8c, type: 3}
+  - {fileID: 21300000, guid: 4d5536cfccd701642ada07b9abd68ab0, type: 3}
+  - {fileID: 21300000, guid: 2d16d170ff05fbc4bba1a64b01d6dd38, type: 3}
+  - {fileID: 21300000, guid: 698989b0deb421d4ca48e390273698c8, type: 3}
+  - {fileID: 21300000, guid: efd561b33d1de9544b834ba81ce10601, type: 3}
+  - {fileID: 21300000, guid: d97808bd48c6dd04d8892b7b7c1194ae, type: 3}
+  eyes:
+  - {fileID: 21300000, guid: 2881f24164f8f384fb53517105eb5799, type: 3}
+  - {fileID: 21300000, guid: deed5941a1bbe9845a680a92d891cce0, type: 3}
+  - {fileID: 21300000, guid: 8a4ec122e740bd74d826e6405b90076f, type: 3}
+  - {fileID: 21300000, guid: e5083b8afbf766f4da72b5e2a576bd23, type: 3}
+  - {fileID: 21300000, guid: 979cd0da7ec69c347974becac6d49d20, type: 3}
+  - {fileID: 21300000, guid: 6af66abc32b8d5e4f85567aa4827a59c, type: 3}
+  - {fileID: 21300000, guid: 7e14d1d10d778244abe56b6dc4f7abfc, type: 3}
+  - {fileID: 21300000, guid: 6146caf2b0b8e3a499e2dd2943d3ec11, type: 3}
+  - {fileID: 21300000, guid: 4e3808044d10c1f4e9b377744c2fecd7, type: 3}
+  - {fileID: 21300000, guid: f60eddb5f17e3644db80878288a5cc5d, type: 3}
+  - {fileID: 21300000, guid: e9cff8998ec3fab4eb2347940833c6ff, type: 3}
+  - {fileID: 21300000, guid: e7f55ca9d3e28db4d9caf7f654f8581a, type: 3}
+  - {fileID: 21300000, guid: 794c668be70843943b848453ac95083a, type: 3}
+  - {fileID: 21300000, guid: 87accdec4017fba47bb0097ab5b6ec1d, type: 3}
+  bodyRenderer: {fileID: 212000012001908502}
+  mouthRenderer: {fileID: 212000012690243178}
+  eyesRenderer: {fileID: 212000011939661564}
 --- !u!114 &114000012470385360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2131,7 +2180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7e14d1d10d778244abe56b6dc4f7abfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2164,6 +2213,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 38bee2c283b9912488bd883b45f4538b, type: 3}
   m_Sprite: {fileID: 21300000, guid: b418bf83cdb873649896a2dadd49e53d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2197,7 +2247,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 698989b0deb421d4ca48e390273698c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

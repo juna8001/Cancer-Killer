@@ -109,5 +109,5 @@ Shader "TSF/Base1"
             ENDCG
         }
     }
-    Fallback "Legacy Shaders/Diffuse"
+    	Fallback "VertexLit"
 }
