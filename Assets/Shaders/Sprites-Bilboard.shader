@@ -37,7 +37,7 @@ Shader "Sprites/Bilboard"
 			#include "UnityCG.cginc"
 			#pragma multi_compile_fog
 			#pragma multi_compile_fwdbase
-			#include "AutoLight.cginc"
+			#include "UnityLightingCommon.cginc"
 			
 			struct appdata_t
 			{
@@ -53,7 +53,8 @@ Shader "Sprites/Bilboard"
 				fixed4 color    : COLOR;
 				float2 texcoord  : TEXCOORD0;
 				UNITY_FOG_COORDS(1)
-				LIGHTING_COORDS(2,3)
+				fixed4 diff : COLOR1;
+				//LIGHTING_COORDS(2,3)
 			};
 			
 			fixed4 _Color;
@@ -64,8 +65,10 @@ Shader "Sprites/Bilboard"
 			{
 				v2f OUT;
 				
-				OUT.vertex = mul(UNITY_MATRIX_P, 
-				mul(UNITY_MATRIX_MV, float4(0.0, 0.0, 0.0, 1.0)) + float4(IN.vertex.x, IN.vertex.y, -IN.vertex.z, 0.0) * float4(_ScaleX, _ScaleY, 1.0, 1.0));
+				//OUT.vertex = mul(UNITY_MATRIX_P, 
+				//mul(UNITY_MATRIX_MV, float4(0.0, 0.0, 0.0, 1.0)) + float4(IN.vertex.x, IN.vertex.y, -IN.vertex.z, 0.0) * float4(_ScaleX, _ScaleY, 1.0, 1.0));
+				
+				OUT.vertex = mul(UNITY_MATRIX_MVP, IN.vertex);
 				
 				OUT.texcoord = IN.texcoord;
 				OUT.color = _Color;
@@ -73,9 +76,13 @@ Shader "Sprites/Bilboard"
 				OUT.vertex = UnityPixelSnap (OUT.vertex);
 				#endif
 				
+				half3 worldNormal = UnityObjectToWorldNormal(IN.normal);
+				half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+				OUT.diff = nl * _LightColor0;
+				
 				UNITY_TRANSFER_FOG(OUT, OUT.vertex);
 				
-				TRANSFER_VERTEX_TO_FRAGMENT(OUT);
+				//TRANSFER_VERTEX_TO_FRAGMENT(OUT);
 				
 				return OUT;
 			}
@@ -101,7 +108,8 @@ Shader "Sprites/Bilboard"
 				c.rgb *= c.a;
 				UNITY_APPLY_FOG(IN.fogCoord, c);
 				
-				return LIGHT_ATTENUATION(IN) * c;
+				//return LIGHT_ATTENUATION(IN) * c;
+				c *= IN.diff;
 				
 				return c;
 			}
