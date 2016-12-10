@@ -20,6 +20,27 @@ public class BossManager : MonoBehaviour {
             positions[i] = pos.GetChild(i).position;
         BOSS.position = positions[0];
         current = 0;
+        StartCoroutine(brain());
+    }
+
+    public void BossDeath()
+    {
+        StopAllCoroutines();
+    }
+
+    IEnumerator brain()
+    {
+        while (true)
+        {
+            if (Random.Range(0, 10) < 1)
+                Jump();
+            else
+                if (Random.Range(0, 2) == 1)
+                Spawn1();
+            else
+                Spawn2();
+            yield return new WaitForSeconds(5);
+        }
     }
 
     public void Jump()
@@ -67,7 +88,7 @@ public class BossManager : MonoBehaviour {
         }
     }
 
-    public void Update()
+    /*public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
             Jump();
@@ -75,6 +96,6 @@ public class BossManager : MonoBehaviour {
             Spawn1();
         if (Input.GetKeyDown(KeyCode.Alpha2))
             Spawn2();
-    }
+    }*/
 
 }
