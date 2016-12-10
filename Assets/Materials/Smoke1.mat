@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Smoke1
-  m_Shader: {fileID: 4800000, guid: 44b54c59129572f469a949a22bc08cd0, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_Shader: {fileID: 4800000, guid: 76374158b4c4e5744b394e9290aae693, type: 3}
+  m_ShaderKeywords: _COLOR_ON _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -78,7 +78,7 @@ Material:
     m_Floats:
     - first:
         name: _Brightness
-      second: 1
+      second: 3
     - first:
         name: _BumpScale
       second: 1
@@ -129,7 +129,7 @@ Material:
       second: 1
     - first:
         name: _TintColor
-      second: 0
+      second: 1
     - first:
         name: _UVSec
       second: 0
@@ -148,4 +148,4 @@ Material:
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _OutlineColor
-      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      second: {r: 0, g: 0, b: 0, a: 1}
