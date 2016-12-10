@@ -13,7 +13,8 @@ public class Enemy : MonoBehaviour {
     void Awake()
     {
         body = GetComponent<Rigidbody>();
-        hp = Random.Range(1,4);
+        hp = Random.Range(30, 60);
+        speed = Random.Range(1000, 3000);
         animator = GetComponent<Animator>();
         animator.SetFloat("Multiplayer", Random.Range(0.8f, 1.2f));
     }

@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
-  hp: 20
+  hp: 60
   attackTime: 1
   range: 1.5
   minDmg: 2
