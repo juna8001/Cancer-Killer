@@ -26,6 +26,11 @@ public class InputController : MonoBehaviour {
         if (Input.GetKey(KeyCode.E))
             kicker.Kick();
 
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 
 }

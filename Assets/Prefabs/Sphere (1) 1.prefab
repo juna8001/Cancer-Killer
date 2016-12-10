@@ -165,6 +165,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 512
+  explosion: {fileID: 1000011414778270, guid: 7d1cb066bc5e10640b3d592b423c04e3, type: 2}
 --- !u!135 &135000011507950338
 SphereCollider:
   m_ObjectHideFlags: 1
