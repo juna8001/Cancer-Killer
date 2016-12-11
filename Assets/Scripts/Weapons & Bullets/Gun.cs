@@ -21,6 +21,8 @@ public class Gun : MonoBehaviour, IWeapon
     private Animator animator;
     protected AudioSource source;
 
+    public float odrzut;
+
     protected virtual void Awake()
     {
         rend = GetComponent<MeshRenderer>();
@@ -57,7 +59,9 @@ public class Gun : MonoBehaviour, IWeapon
             Bullet bull = go.GetComponent<Bullet>();
             bull.minDmg = minDmg;
             bull.maxDmg = maxDmg;
+            //ScreenShake.Instance.animator.SetTrigger("Shake");
             Animate("Gun");
+            OdrzutKurwa.instance.Kick(odrzut);
         }
     }
 

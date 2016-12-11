@@ -9,6 +9,8 @@ public class Kicker : MonoBehaviour {
     public float range, kickForce;
     public LayerMask mask;
     public int minDmg, maxDmg;
+    [SerializeField]
+    private float lowerTimeScale;
 
     [SerializeField]
     private GameObject bloodSplash;
@@ -45,9 +47,14 @@ public class Kicker : MonoBehaviour {
         {
             audioSource.Play();
             hit.collider.GetComponent<Enemy>().DealDmg(UnityEngine.Random.Range(minDmg, maxDmg));
-            hit.collider.GetComponent<Rigidbody>().AddForce(transform.forward * kickForce, ForceMode.Acceleration);
+            hit.collider.GetComponent<Rigidbody>().AddForce((transform.forward + transform.up * 0.5f) * kickForce, ForceMode.Acceleration);
             GameObject temp = (GameObject)Instantiate(bloodSplash, hit.point, new Quaternion());
             temp.GetComponent<ParticleSystem>().Play();
         }
+    }
+
+    void FixedUpdate()
+    {
+        Time.timeScale = lowerTimeScale;
     }
 }

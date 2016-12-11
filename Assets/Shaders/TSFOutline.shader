@@ -55,7 +55,6 @@ Shader "TSF/BaseOutline1"
 
             fixed _Outline;
 
-            
             v2f vert (appdata_t v) 
             {
                 v2f o;

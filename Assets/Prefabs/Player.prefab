@@ -48,6 +48,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000010184669110
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012007881478}
+  m_Layer: 0
+  m_Name: Weapons_Odrzut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000010507456320
 GameObject:
   m_ObjectHideFlags: 1
@@ -147,7 +162,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010887686522}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +230,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011790446736}
   - 212: {fileID: 212000011250596326}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,6 +353,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011335539642}
   - 114: {fileID: 114000012390808926}
+  - 114: {fileID: 114000014126234050}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -417,7 +433,7 @@ GameObject:
   - 82: {fileID: 82000012100925892}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,7 +445,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011047217956}
   m_LocalRotation: {x: 0.0609953, y: 0.5926895, z: -0.045084734, w: 0.80185175}
-  m_LocalPosition: {x: 0.3, y: -1.61, z: 0.94}
+  m_LocalPosition: {x: 0.3, y: -1.86, z: 0.34}
   m_LocalScale: {x: 0.18, y: 0.69, z: 1}
   m_LocalEulerAnglesHint: {x: 8.7, y: 72.94, z: 0}
   m_Children: []
@@ -457,15 +473,15 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.39, y: -0.25, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0.2552, y: -5.626, z: -68.837204}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013352998112}
   - {fileID: 4000013799126810}
   - {fileID: 4000012600547458}
   - {fileID: 4000011081336070}
   - {fileID: 4000011022268974}
-  m_Father: {fileID: 4000011335539642}
-  m_RootOrder: 1
+  m_Father: {fileID: 4000012007881478}
+  m_RootOrder: 0
 --- !u!4 &4000010659225020
 Transform:
   m_ObjectHideFlags: 1
@@ -473,9 +489,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014294476848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.6, y: 1, z: 40.9}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children:
   - {fileID: 4000011335539642}
   - {fileID: 4000010887686522}
@@ -501,8 +517,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012790092218}
   m_LocalRotation: {x: 0.0998745, y: 0.6657772, z: -0.09060832, w: 0.7338638}
-  m_LocalPosition: {x: 1.1, y: -3.17, z: 5.5}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: 3.97, y: -3.68, z: 3.7}
+  m_LocalScale: {x: 0.46, y: 0.7, z: 0.7}
   m_LocalEulerAnglesHint: {x: 15.5, y: 84.43, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013799126810}
@@ -516,7 +532,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011790446736}
   m_Father: {fileID: 4000010659225020}
@@ -561,7 +577,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012221794360}
-  - {fileID: 4000010526156620}
+  - {fileID: 4000012007881478}
   m_Father: {fileID: 4000010659225020}
   m_RootOrder: 0
 --- !u!4 &4000011406978948
@@ -590,6 +606,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010887686522}
   m_RootOrder: 0
+--- !u!4 &4000012007881478
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010184669110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000010526156620}
+  m_Father: {fileID: 4000011335539642}
+  m_RootOrder: 1
 --- !u!4 &4000012221794360
 Transform:
   m_ObjectHideFlags: 1
@@ -678,7 +708,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 1000
+  far clip plane: 5000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -952,8 +982,8 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014294476848}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 10
+  m_Drag: 0.999
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1955,7 +1985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KickWaitTime: 1.2
-  KickTime: 0.3
+  KickTime: 0.2
   range: 2
   kickForce: 500
   mask:
@@ -1980,12 +2010,13 @@ MonoBehaviour:
   bulletSpeed: 60
   shootTime: 1
   maxBullets: 0
-  Bullets: 25
+  Bullets: 9999
   minDmg: 20
   maxDmg: 30
   shootAngle: 6
   clip: {fileID: 8300000, guid: 9661810d55fb3ef4ab2ba04cea37ef28, type: 3}
   emptyClip: {fileID: 8300000, guid: b2e46313ff23dca44bdc64cc1d8a27dc, type: 3}
+  odrzut: 15
   shell: {fileID: 1000012038019796, guid: deb2f9f6b24fc3943832865f752211b3, type: 2}
   dropForce: {x: 5, y: 8, z: 10}
   shoots: 10
@@ -2016,15 +2047,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1000012041267864, guid: 8566c517cad00df46aa6b7104f0f5b0b, type: 2}
-  bulletSpeed: 24
+  bulletSpeed: 80
   shootTime: 1
   maxBullets: 0
-  Bullets: 10
+  Bullets: 9999
   minDmg: 60
   maxDmg: 80
   shootAngle: 0.1
   clip: {fileID: 8300000, guid: fccbd51398fb84146a6621b5fcfc4e00, type: 3}
   emptyClip: {fileID: 8300000, guid: b2e46313ff23dca44bdc64cc1d8a27dc, type: 3}
+  odrzut: 2
   shell: {fileID: 1000012038019796, guid: deb2f9f6b24fc3943832865f752211b3, type: 2}
   dropForce: {x: 10, y: 5, z: 5}
 --- !u!114 &114000012852154338
@@ -2078,12 +2110,13 @@ MonoBehaviour:
   bulletSpeed: 70
   shootTime: 0.1
   maxBullets: 0
-  Bullets: 100
+  Bullets: 9999
   minDmg: 35
   maxDmg: 45
   shootAngle: 2
   clip: {fileID: 8300000, guid: 3092b352e3c737848a7fda1e66da76ad, type: 3}
   emptyClip: {fileID: 8300000, guid: b2e46313ff23dca44bdc64cc1d8a27dc, type: 3}
+  odrzut: 5
   shell: {fileID: 1000012038019796, guid: deb2f9f6b24fc3943832865f752211b3, type: 2}
   dropForce: {x: 2, y: 10, z: 5}
 --- !u!114 &114000013386881396
@@ -2127,7 +2160,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014085236992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -2165,8 +2198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fbabbbd0699e445a3fd7c2f153acc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
-  RunSpeed: 9
+  Speed: 8
+  RunSpeed: 15
+  maxVelocityChange: 10
   Rotation: {x: 0, y: 0}
   Head: {fileID: 0}
 --- !u!114 &114000013899222084
@@ -2184,14 +2218,27 @@ MonoBehaviour:
   bulletSpeed: 60
   shootTime: 0.4
   maxBullets: 0
-  Bullets: 25
+  Bullets: 9999
   minDmg: 30
   maxDmg: 40
   shootAngle: 2
   clip: {fileID: 8300000, guid: c05b721e131de87458ca4831ba95e369, type: 3}
   emptyClip: {fileID: 8300000, guid: b2e46313ff23dca44bdc64cc1d8a27dc, type: 3}
+  odrzut: 30
   shell: {fileID: 1000012038019796, guid: deb2f9f6b24fc3943832865f752211b3, type: 2}
   dropForce: {x: 2, y: 10, z: 5}
+--- !u!114 &114000014126234050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014039601548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcfc7b1f5f79df4391ab763d10c80db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 4000012007881478}
 --- !u!114 &114000014232722868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2239,7 +2286,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a924433505b243047877e63fe49006ce, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -2325,7 +2372,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5e3cfedc7fdd9084db51b798cb7dde6d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -2341,7 +2388,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a9a617f092e0ae540b8749afcd0659b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b734432fd037a9e4998fa8a0dd8bedf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

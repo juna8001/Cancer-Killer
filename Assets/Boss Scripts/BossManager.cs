@@ -26,20 +26,21 @@ public class BossManager : MonoBehaviour {
     public void BossDeath()
     {
         StopAllCoroutines();
+        Destroy(gameObject);
     }
 
     IEnumerator brain()
     {
         while (true)
         {
-            if (Random.Range(0, 10) < 1)
+            if (Random.Range(0, 5) < 1)
                 Jump();
             else
                 if (Random.Range(0, 2) == 1)
                 Spawn1();
             else
                 Spawn2();
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
         }
     }
 
@@ -50,7 +51,6 @@ public class BossManager : MonoBehaviour {
 
     IEnumerator jump()
     {
-        Debug.Log("123");
         int index = current;
         while (index == current)
             index = Random.Range(0, positions.Length);
@@ -72,7 +72,7 @@ public class BossManager : MonoBehaviour {
 
     public void Spawn1()
     {
-        int ammount = Random.Range(3, 9);
+        int ammount = Random.Range(5, 14);
         for(int i = 0; i < ammount; i++)
         {
             Instantiate(spawnedEnemyPrefab, BOSS.position + BOSS.TransformVector(Random.Range(-5f, 5f), Random.Range(-5f, 5f), Random.Range(-5f, -10f)), BOSS.rotation);
@@ -81,7 +81,7 @@ public class BossManager : MonoBehaviour {
 
     public void Spawn2()
     {
-        int ammount = Random.Range(3, 9);
+        int ammount = Random.Range(5, 14);
         for (int i = 0; i < ammount; i++)
         {
             Instantiate(boomEnemyPrefab, BOSS.position + BOSS.TransformVector(Random.Range(-5f, 5f), Random.Range(-5f, 5f), Random.Range(-5f, -10f)), BOSS.rotation);

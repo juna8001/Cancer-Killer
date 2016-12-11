@@ -19,6 +19,7 @@ public class ShotGun : Gun {
         else
             if (Time.time - lastShoot > shootTime)
         {
+            OdrzutKurwa.instance.Kick(odrzut);
             source.clip = clip;
             source.Play();
             Bullets--;
@@ -34,6 +35,7 @@ public class ShotGun : Gun {
                 Bullet bull = go.GetComponent<Bullet>();
                 bull.minDmg = minDmg;
                 bull.maxDmg = maxDmg;
+                ScreenShake.Instance.animator.SetTrigger("Shake");
                 Animate("ShotGun");
             }
         }

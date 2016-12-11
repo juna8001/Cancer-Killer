@@ -37,6 +37,7 @@ public class Granade : Bullet {
         }
         GameObject temp = (GameObject)Instantiate(explosion, transform.position, new Quaternion());
         temp.GetComponent<ParticleSystem>().Play();
+        ScreenShake.Instance.animator.SetTrigger("Shake");
         Destroy(gameObject);
     }
 }

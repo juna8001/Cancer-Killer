@@ -163,7 +163,7 @@ MonoBehaviour:
   existTime: 3
   bloodSplash: {fileID: 1000012643758966, guid: 3cd00411676e02042acbc10fc9a03a40,
     type: 2}
-  range: 3
+  range: 4
   time: 3
   mask:
     serializedVersion: 2

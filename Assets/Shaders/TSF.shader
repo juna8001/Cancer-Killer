@@ -18,7 +18,7 @@ Shader "TSF/Base1"
     	ZWrite On
 	   	Cull Back
 		Lighting Off
-		Fog { Mode Off }
+		Fog { Mode Off } 
 		
         Pass 
         {
@@ -55,8 +55,9 @@ Shader "TSF/Base1"
                     half2 uv : TEXCOORD0;
                     #endif
                     half2 uvn : TEXCOORD1;
-					UNITY_FOG_COORDS(1)
+					
 					fixed4 diff : COLOR1;
+					UNITY_FOG_COORDS(2)
                  };
                
                 v2f vert (appdata_base0 v)

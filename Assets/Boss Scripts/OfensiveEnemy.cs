@@ -8,10 +8,16 @@ public class OfensiveEnemy : Enemy {
 
     float lastHit;
 
+    bool run = true;
+
     protected override void Update()
     {
-        body.AddForce((Camera.main.transform.position - transform.position).normalized * speed * Time.deltaTime);
-        if(Time.time - lastHit > attackTime && Vector3.Distance(transform.position, Movement.PlayerTransform.position) < range){
+        if (run)
+        {
+            body.AddForce((Camera.main.transform.position - transform.position).normalized * speed * Time.deltaTime);
+        }
+
+        if (Time.time - lastHit > attackTime && Vector3.Distance(transform.position, Movement.PlayerTransform.position) < range){
 
             lastHit = Time.time;
             Debug.Log(name);
