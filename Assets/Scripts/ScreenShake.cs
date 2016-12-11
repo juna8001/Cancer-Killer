@@ -14,7 +14,8 @@ public class ScreenShake : MonoBehaviour {
         }
         else
         {
-            Destroy(this);
+            if(Instance != this)
+                Destroy(this);
         }
 		animator = GetComponent<Animator>();
 	}

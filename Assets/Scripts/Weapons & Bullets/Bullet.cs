@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
             if(hole != null)
             {
                 GameObject go = (GameObject) Instantiate(hole, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
-                go.transform.position += go.transform.forward * 0.02f;
+                go.transform.position += go.transform.forward * 0.5f;
                 go.transform.localScale = Vector3.one * 0.5f;
             }
         }
