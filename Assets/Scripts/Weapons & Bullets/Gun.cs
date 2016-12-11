@@ -57,6 +57,7 @@ public class Gun : MonoBehaviour, IWeapon
             Bullet bull = go.GetComponent<Bullet>();
             bull.minDmg = minDmg;
             bull.maxDmg = maxDmg;
+            //ScreenShake.Instance.animator.SetTrigger("Shake");
             Animate("Gun");
         }
     }
