@@ -9,7 +9,9 @@ public class SceneChanger : MonoBehaviour {
     [SerializeField]
     private GameObject faderCanvas;
     [SerializeField]
-    private float delay = 0.5f;
+    private float delay = 1f;
+
+    public int sceneNumber = 1;
     
     public void ChangeScene()
     {
@@ -20,8 +22,9 @@ public class SceneChanger : MonoBehaviour {
 
     void ChangeSceneBro()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneNumber);
         faderCanvas.GetComponentInChildren<Animator>().SetTrigger("FadeOut");
+        sceneNumber++;
     }
 
     void Update()
