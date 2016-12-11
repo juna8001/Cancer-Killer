@@ -15,12 +15,19 @@ public class EnemyBodyRandomiser : MonoBehaviour {
 	private SpriteRenderer mouthRenderer;
 	[SerializeField]
 	private SpriteRenderer eyesRenderer;
+	[SerializeField]
+	private Sprite [] xEyes;
 	
 
 	void Awake () {
 		bodyRenderer.sprite = bodies[Random.Range(0, bodies.Length)];
 		mouthRenderer.sprite = mouths[Random.Range(0, mouths.Length)];
 		eyesRenderer.sprite = eyes[Random.Range(0, eyes.Length)];
+	}
+
+	public void SetXEyes()
+	{
+		eyesRenderer.sprite = xEyes[Random.Range(0, xEyes.Length)];
 	}
 	
 }
