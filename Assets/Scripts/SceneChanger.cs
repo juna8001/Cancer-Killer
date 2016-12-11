@@ -13,7 +13,6 @@ public class SceneChanger : MonoBehaviour {
     
     public void ChangeScene()
     {
-        DontDestroyOnLoad(faderCanvas);
         DontDestroyOnLoad(gameObject);
         faderCanvas.GetComponentInChildren<Animator>().SetTrigger("FadeIn");
         Invoke("ChangeSceneBro", delay);
