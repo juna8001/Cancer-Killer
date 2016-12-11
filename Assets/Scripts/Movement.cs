@@ -26,14 +26,14 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody body;
 
-    private Animator animator;
+    public Animator animator;
 
     void Start()
     {
         PlayerTransform = transform;
         body = GetComponent<Rigidbody>();
         Head = transform.GetChild(0).transform;
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); 
     }
 
     void FixedUpdate()
