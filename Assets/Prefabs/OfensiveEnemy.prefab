@@ -269,41 +269,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodies:
-  - {fileID: 21300000, guid: a9a617f092e0ae540b8749afcd0659b1, type: 3}
-  - {fileID: 21300000, guid: dc0589551f4956940a88e3867e4dbbb8, type: 3}
-  - {fileID: 21300000, guid: 545808c59f7da3b43841fce7a4b7e486, type: 3}
-  - {fileID: 21300000, guid: f1ff85bb4d6fa814caee0aa16520a732, type: 3}
-  - {fileID: 21300000, guid: dfe90f8db8bd0f548a892df51fb2918c, type: 3}
-  - {fileID: 21300000, guid: cc957dfe451e5884792a3d34dbd3b499, type: 3}
-  - {fileID: 21300000, guid: 38bee2c283b9912488bd883b45f4538b, type: 3}
-  - {fileID: 21300000, guid: a5a0a9b67bfc38948b5428819deec433, type: 3}
-  - {fileID: 21300000, guid: db5e5ced2b2015a4a881606821477df7, type: 3}
+  - {fileID: 21300000, guid: 3ba952949a6e35f438adadfad716ae6a, type: 3}
+  - {fileID: 21300000, guid: e4bd930fee8bc894fab6c5e6c84a3840, type: 3}
+  - {fileID: 21300000, guid: 258395982411acb419bd4b8cb1524280, type: 3}
   mouths:
-  - {fileID: 21300000, guid: c5b3f701f429b6b48b199b2c189433d9, type: 3}
-  - {fileID: 21300000, guid: 5baf9b83378f0da4697d6aac32fa6c8c, type: 3}
-  - {fileID: 21300000, guid: 4d5536cfccd701642ada07b9abd68ab0, type: 3}
-  - {fileID: 21300000, guid: 2d16d170ff05fbc4bba1a64b01d6dd38, type: 3}
-  - {fileID: 21300000, guid: 698989b0deb421d4ca48e390273698c8, type: 3}
-  - {fileID: 21300000, guid: efd561b33d1de9544b834ba81ce10601, type: 3}
-  - {fileID: 21300000, guid: d97808bd48c6dd04d8892b7b7c1194ae, type: 3}
+  - {fileID: 21300000, guid: 251c1e439592884438ca12dd12618686, type: 3}
+  - {fileID: 21300000, guid: c4eec72a002e6084096ac83d2e36ea84, type: 3}
+  - {fileID: 21300000, guid: 61c6f56eaafefec439fdf4dc623eadf1, type: 3}
   eyes:
-  - {fileID: 21300000, guid: 2881f24164f8f384fb53517105eb5799, type: 3}
-  - {fileID: 21300000, guid: deed5941a1bbe9845a680a92d891cce0, type: 3}
-  - {fileID: 21300000, guid: 8a4ec122e740bd74d826e6405b90076f, type: 3}
-  - {fileID: 21300000, guid: e5083b8afbf766f4da72b5e2a576bd23, type: 3}
-  - {fileID: 21300000, guid: 979cd0da7ec69c347974becac6d49d20, type: 3}
-  - {fileID: 21300000, guid: 6af66abc32b8d5e4f85567aa4827a59c, type: 3}
-  - {fileID: 21300000, guid: 7e14d1d10d778244abe56b6dc4f7abfc, type: 3}
-  - {fileID: 21300000, guid: 6146caf2b0b8e3a499e2dd2943d3ec11, type: 3}
-  - {fileID: 21300000, guid: 4e3808044d10c1f4e9b377744c2fecd7, type: 3}
-  - {fileID: 21300000, guid: f60eddb5f17e3644db80878288a5cc5d, type: 3}
-  - {fileID: 21300000, guid: e9cff8998ec3fab4eb2347940833c6ff, type: 3}
-  - {fileID: 21300000, guid: e7f55ca9d3e28db4d9caf7f654f8581a, type: 3}
-  - {fileID: 21300000, guid: 794c668be70843943b848453ac95083a, type: 3}
-  - {fileID: 21300000, guid: 87accdec4017fba47bb0097ab5b6ec1d, type: 3}
+  - {fileID: 21300000, guid: 2a60aca8fddfa7c4aa68af50acd2aca4, type: 3}
+  - {fileID: 21300000, guid: 55a28a4a5ad111246906d3542ccf8b3a, type: 3}
+  - {fileID: 21300000, guid: 15d3f9d4a2216494793b5e9400a3126f, type: 3}
+  - {fileID: 21300000, guid: b0738c8609bb70e4a913ca7d183fe86a, type: 3}
   bodyRenderer: {fileID: 212000010535072120}
   mouthRenderer: {fileID: 212000010110687420}
   eyesRenderer: {fileID: 212000011297094136}
+  xEyes: []
 --- !u!114 &114000011138205188
 MonoBehaviour:
   m_ObjectHideFlags: 1

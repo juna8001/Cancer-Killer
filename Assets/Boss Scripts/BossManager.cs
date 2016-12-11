@@ -32,7 +32,7 @@ public class BossManager : MonoBehaviour {
     {
         while (true)
         {
-            if (Random.Range(0, 10) < 1)
+            if (Random.Range(0, 5) < 1)
                 Jump();
             else
                 if (Random.Range(0, 2) == 1)
@@ -50,7 +50,6 @@ public class BossManager : MonoBehaviour {
 
     IEnumerator jump()
     {
-        Debug.Log("123");
         int index = current;
         while (index == current)
             index = Random.Range(0, positions.Length);
