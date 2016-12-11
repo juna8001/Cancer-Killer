@@ -23,6 +23,7 @@ GameObject:
   - 135: {fileID: 135000014068600512}
   - 95: {fileID: 95000012428172496}
   - 114: {fileID: 114000010505383696}
+  - 82: {fileID: 82000013168559496}
   m_Layer: 9
   m_Name: BoomEnemy
   m_TagString: Enemy
@@ -216,7 +217,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012439771104}
-  m_LocalRotation: {x: -0.00065711606, y: 0.97942406, z: -0.0031894795, w: -0.20178694}
+  m_LocalRotation: {x: -0.030789966, y: 0.968134, z: -0.15101352, w: -0.19739167}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 4.63, y: -15.609001, z: 0}
@@ -240,6 +241,80 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!82 &82000013168559496
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010729166750}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95000012428172496
 Animator:
   serializedVersion: 3
@@ -270,6 +345,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   hp: 3
+  shouts:
+  - {fileID: 8300000, guid: f8f734217f3f3134ab07025c500deb82, type: 3}
+  - {fileID: 8300000, guid: f0ce507d5402fe34985761dace24bafb, type: 3}
+  - {fileID: 8300000, guid: 0023e3c20eb8cef44be612f8e377a9e1, type: 3}
+  - {fileID: 8300000, guid: bab98779b71f5be439a251822930759f, type: 3}
+  - {fileID: 8300000, guid: f357e4914fd92014a85750802913dc3f, type: 3}
+  - {fileID: 8300000, guid: 98dd6bc5febebb6489bfef9898a36b3d, type: 3}
+  - {fileID: 8300000, guid: 6ccdeef817a78c44f9feb8e3ec73c14f, type: 3}
+  - {fileID: 8300000, guid: d5a15a14339853746a85d0913dd8aca9, type: 3}
+  - {fileID: 8300000, guid: acfb59d5dcc0cd34f9451d44c9b3690c, type: 3}
+  - {fileID: 8300000, guid: 5bce8145b76e0b9429bd029932742f22, type: 3}
+  - {fileID: 8300000, guid: 3aa0285d5005a13409c412ff32a1c9e3, type: 3}
+  - {fileID: 8300000, guid: cc6f5d21591237243a33c7215d2fbd06, type: 3}
   range: 3
   minDmg: 5
   maxDmg: 15
@@ -304,7 +392,10 @@ MonoBehaviour:
   bodyRenderer: {fileID: 212000010605773526}
   mouthRenderer: {fileID: 212000012704500044}
   eyesRenderer: {fileID: 212000013176636846}
-  xEyes: []
+  xEyes:
+  - {fileID: 21300000, guid: d899ccf625f0cae4ca86586d37d57dc4, type: 3}
+  - {fileID: 21300000, guid: 80ce492677eb9f04c8cd17c071b06879, type: 3}
+  - {fileID: 21300000, guid: bfe6055d00b8db44595c6f5e3bb8d146, type: 3}
 --- !u!114 &114000014134730524
 MonoBehaviour:
   m_ObjectHideFlags: 1

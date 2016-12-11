@@ -21,6 +21,8 @@ public class Gun : MonoBehaviour, IWeapon
     private Animator animator;
     protected AudioSource source;
 
+    public float odrzut;
+
     protected virtual void Awake()
     {
         rend = GetComponent<MeshRenderer>();
@@ -58,6 +60,7 @@ public class Gun : MonoBehaviour, IWeapon
             bull.minDmg = minDmg;
             bull.maxDmg = maxDmg;
             Animate("Gun");
+            OdrzutKurwa.instance.Kick(odrzut);
         }
     }
 

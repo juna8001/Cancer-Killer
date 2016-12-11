@@ -12,7 +12,7 @@ public class WallBrick : MonoBehaviour {
     {
         while(transform.localScale.x > 0.1)
         {
-            transform.localScale *= 0.99f;
+            transform.localScale *= 0.95f;
             yield return new WaitForSeconds(0.02f);
         }
         Destroy(gameObject);

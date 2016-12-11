@@ -42,6 +42,7 @@ public class Rifle : Gun {
             bull.minDmg = minDmg;
             bull.maxDmg = maxDmg;
             Animate("Gun");
+            OdrzutKurwa.instance.Kick(odrzut);
         }
     }
 

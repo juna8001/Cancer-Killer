@@ -19,6 +19,7 @@ public class ShotGun : Gun {
         else
             if (Time.time - lastShoot > shootTime)
         {
+            OdrzutKurwa.instance.Kick(odrzut);
             source.clip = clip;
             source.Play();
             Bullets--;

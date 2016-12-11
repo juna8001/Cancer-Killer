@@ -11,9 +11,22 @@ public class BoomEnemy : Enemy {
     [SerializeField]
     GameObject boomPrefab;
 
+    protected override void Start()
+    {
+        base.Start();
+        speed = Random.Range(2000, 4000);
+    }
+
+    bool run = true;
+
     protected override void Update()
     {
-        body.AddForce((Camera.main.transform.position - transform.position).normalized * speed * Time.deltaTime);
+
+        if (run)
+        {
+            body.AddForce((Camera.main.transform.position - transform.position).normalized * speed * Time.deltaTime);
+        }
+
         if (Vector3.Distance(transform.position, Movement.PlayerTransform.position) < range-1)
         {
             Die();

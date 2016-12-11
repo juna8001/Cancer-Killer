@@ -195,6 +195,7 @@ MonoBehaviour:
   minDmg: 1
   maxDmg: 2
   existTime: 10
+  hole: {fileID: 1000013644058772, guid: e15d41c3ceed60b45b11feca02591533, type: 2}
   bloodSplash: {fileID: 1000012643758966, guid: 3cd00411676e02042acbc10fc9a03a40,
     type: 2}
 --- !u!135 &135000011507950338

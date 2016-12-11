@@ -14,13 +14,19 @@ public class Enemy : MonoBehaviour {
     protected Animator animator;
     private AudioSource audioSource;
 
-    protected virtual void Awake()
+    protected virtual void Start()
+    {
+
+        hp = Random.Range(30, 60);
+        speed = Random.Range(1000, 2000);
+    }
+
+    void Awake()
     {
         body = GetComponent<Rigidbody>();
-        hp = Random.Range(30, 60);
-        speed = Random.Range(700, 1000);
         animator = GetComponent<Animator>();
-        animator.SetFloat("Multiplayer", Random.Range(0.8f, 1.2f));
+        if(animator != null)
+            animator.SetFloat("Multiplayer", Random.Range(0.8f, 1.2f));
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -47,6 +53,7 @@ public class Enemy : MonoBehaviour {
         SpriteRotator rotator = GetComponentInChildren<SpriteRotator>();
         rotator.enabled = false;
         rotator.gameObject.transform.rotation = Quaternion.Euler(0,rotator.gameObject.transform.rotation.eulerAngles.y,0);
+        //estroy(GetComponent<Collider>());
         this.enabled = false;
     }
 }
