@@ -1980,7 +1980,7 @@ MonoBehaviour:
   bulletSpeed: 60
   shootTime: 1
   maxBullets: 0
-  Bullets: 25
+  Bullets: 9999
   minDmg: 20
   maxDmg: 30
   shootAngle: 6
@@ -2016,10 +2016,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1000012041267864, guid: 8566c517cad00df46aa6b7104f0f5b0b, type: 2}
-  bulletSpeed: 36
+  bulletSpeed: 80
   shootTime: 1
   maxBullets: 0
-  Bullets: 10
+  Bullets: 9999
   minDmg: 60
   maxDmg: 80
   shootAngle: 0.1
@@ -2078,7 +2078,7 @@ MonoBehaviour:
   bulletSpeed: 70
   shootTime: 0.1
   maxBullets: 0
-  Bullets: 100
+  Bullets: 9999
   minDmg: 35
   maxDmg: 45
   shootAngle: 2
@@ -2185,7 +2185,7 @@ MonoBehaviour:
   bulletSpeed: 60
   shootTime: 0.4
   maxBullets: 0
-  Bullets: 25
+  Bullets: 9999
   minDmg: 30
   maxDmg: 40
   shootAngle: 2
