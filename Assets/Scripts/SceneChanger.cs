@@ -9,7 +9,7 @@ public class SceneChanger : MonoBehaviour {
     [SerializeField]
     private GameObject faderCanvas;
     [SerializeField]
-    private float delay = 1f;
+    private float delay = 0.5f;
     
     public void ChangeScene()
     {
