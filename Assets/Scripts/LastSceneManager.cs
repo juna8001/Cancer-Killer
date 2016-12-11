@@ -62,7 +62,6 @@ public class LastSceneManager : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
 
         // Kółko i flaga
-        Kolko.SetActive(true);
         for (float i = 0; i < 60; i++)
         {
             Poziom1Ukonczony.color = new Color(1, 1, 1, i / 60f);
