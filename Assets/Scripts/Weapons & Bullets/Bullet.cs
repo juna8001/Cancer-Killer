@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
         StartCoroutine(destroyer());
     }
 
-    IEnumerator destroyer()
+    public IEnumerator destroyer()
     {
         yield return new WaitForSeconds(existTime);
         Destroy(gameObject);

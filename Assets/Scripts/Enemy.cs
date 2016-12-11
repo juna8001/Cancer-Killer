@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour {
     protected Rigidbody body;
     protected Animator animator;
 
-    void Awake()
+    protected virtual void Awake()
     {
         body = GetComponent<Rigidbody>();
         hp = Random.Range(30, 60);
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour {
         body.AddForce((transform.position - Camera.main.transform.position).normalized * speed * Time.deltaTime);
     }
 
-	public void DealDmg(int dmg)
+	public virtual void DealDmg(int dmg)
     {
         hp -= dmg;
         if(hp<=0)
