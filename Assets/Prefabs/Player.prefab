@@ -489,7 +489,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014294476848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7, y: 1.5, z: -6.4}
+  m_LocalPosition: {x: 6.7, y: 3.66, z: -5.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2221,8 +2221,8 @@ MonoBehaviour:
   shootTime: 0.4
   maxBullets: 0
   Bullets: 9999
-  minDmg: 30
-  maxDmg: 40
+  minDmg: 4000
+  maxDmg: 4000
   shootAngle: 2
   clip: {fileID: 8300000, guid: c05b721e131de87458ca4831ba95e369, type: 3}
   emptyClip: {fileID: 8300000, guid: b2e46313ff23dca44bdc64cc1d8a27dc, type: 3}

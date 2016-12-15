@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Boss : Enemy {
 
+    public GameObject text;
+
 	void Awake() { }
 #pragma warning disable CS0114 // Member hides inherited member; missing override keyword
     void Update() { }
@@ -20,6 +22,7 @@ public class Boss : Enemy {
 
     protected override void Die()
     {
+        Instantiate(text);
         transform.parent.GetComponent<BossManager>().BossDeath();
         Destroy(gameObject);
     }
